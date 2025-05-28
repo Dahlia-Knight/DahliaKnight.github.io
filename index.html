@@ -26,13 +26,20 @@
         /* Hero Section with Full Screen Image */
         .hero {
             height: 100vh;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-                url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAEYAoADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACgtakrtMIpI12JNBJbTrNDJJHNH5TJlXVgCGBxkHtWJa6T4kbT3u6SfBR8JqTG7naSgfkJ0L7T3xkOxzgg+jW+k2dsuLaEIbM/fIoqr4rUk4uZXu35cFgqjz9OOa/Ut9hTuDgE4HmHDlrk56s2cKzJkDGOF3eWcJnjPB59q4OsU4PKfvdNLMZHdJNGf3gWQsw55k8wDqG2jaMg=') no-repeat center/cover;
             display: flex;
             flex-direction: column;
             position: relative;
             overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
         }
 
         .hero::before {
@@ -44,7 +51,8 @@
             bottom: 0;
             background: 
                 radial-gradient(circle at 30% 20%, rgba(139, 0, 0, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(75, 0, 130, 0.15) 0%, transparent 50%);
+                radial-gradient(circle at 70% 80%, rgba(75, 0, 130, 0.15) 0%, transparent 50%),
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
             z-index: 1;
         }
 
@@ -155,10 +163,6 @@
         }
 
         .author-photo {
-            background-image: url('dahlia.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
             height: 500px;
             border-radius: 15px;
             box-shadow: 0 20px 60px rgba(139, 0, 0, 0.3);
@@ -213,12 +217,22 @@
         }
 
         .book-cover {
-            background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAIAAoADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoookBQALVy//nXEAWHNz3BL/VryDc1cFVaKKNagAAA') no-repeat center/cover;
             height: 500px;
             border-radius: 10px;
             box-shadow: 0 20px 60px rgba(139, 0, 0, 0.4);
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+        }
+
+        .book-cover img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
         }
 
         .book-info {
@@ -394,7 +408,7 @@
                 font-size: 1.3rem;
             }
 
-            .about {
+            .author-photo-section {
                 padding: 4rem 1rem;
             }
 
@@ -411,6 +425,8 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
+        <img src="top.jpg" alt="Dahlia Knight" class="hero-image">
+        
         <!-- Author Name - Top Left -->
         <div class="author-name">
             DAHLIA KNIGHT
@@ -434,7 +450,9 @@
     <!-- Author Photo Section -->
     <section id="author" class="author-photo-section">
         <div class="author-photo-container">
-            <div class="author-photo"></div>
+            <div class="author-photo">
+                <img src="dahlia.png" alt="Dahlia Knight Author Photo">
+            </div>
             <div class="author-details">
                 <h2>About Dahlia</h2>
                 <p>Dahlia Knight writes <span class="highlight">dark, decadent romance</span> for readers who crave powerful men and the women who dare to ruin them.</p>
@@ -449,7 +467,9 @@
     <!-- Book Section -->
     <section id="book" class="book-section">
         <div class="book-container">
-            <div class="book-cover"></div>
+            <div class="book-cover">
+                <img src="cover.jpg" alt="Runway to Ruin Book Cover">
+            </div>
             <div class="book-info">
                 <h2 class="book-title">Runway to Ruin</h2>
                 <div class="book-subtitle">A Dark Billionaire Romance</div>
