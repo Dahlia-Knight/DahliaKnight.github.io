@@ -139,46 +139,50 @@
             }
         }
 
-        /* About Section */
-        .about {
+        /* Author Photo Section */
+        .author-photo-section {
             padding: 6rem 2rem;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a1a 100%);
-            position: relative;
+            background: linear-gradient(135deg, #2a0a1a 0%, #1a0a2a 50%, #0a0a1a 100%);
         }
 
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(139, 0, 0, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(75, 0, 130, 0.08) 0%, transparent 40%);
-        }
-
-        .about-container {
-            max-width: 1000px;
+        .author-photo-container {
+            max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .author-photo {
+            background: url('dahlia.png') no-repeat center/cover;
+            height: 500px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(139, 0, 0, 0.3);
             position: relative;
-            z-index: 1;
+            overflow: hidden;
         }
 
-        .about-content {
-            text-align: center;
-            font-size: 1.4rem;
-            line-height: 1.8;
+        .author-details {
             color: #e0e0e0;
-            font-style: italic;
-            margin-bottom: 4rem;
         }
 
-        .about-content p {
+        .author-details h2 {
+            font-size: 2.5rem;
+            color: #CD5C5C;
             margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
         }
 
-        .about-content .highlight {
+        .author-details p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: #ccc;
+        }
+
+        .author-details .highlight {
             color: #CD5C5C;
             font-weight: 500;
         }
@@ -341,6 +345,15 @@
                 font-size: 1.6rem;
             }
 
+            .author-photo-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .author-photo {
+                height: 400px;
+            }
+
             .book-container {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -352,10 +365,6 @@
 
             .book-title {
                 font-size: 2.2rem;
-            }
-
-            .about-content {
-                font-size: 1.2rem;
             }
 
             .social-links {
@@ -403,19 +412,21 @@
             <div class="hero-tagline">
                 Dark, decadent romance for readers who crave powerful men and the women who dare to ruin them
             </div>
-            <a href="#about" class="cta-button">Enter My World</a>
+            <a href="#author" class="cta-button">Enter My World</a>
         </div>
 
         <!-- Scroll Down Indicator -->
-        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView()">
+        <div class="scroll-down" onclick="document.getElementById('author').scrollIntoView()">
             ↓
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-container">
-            <div class="about-content">
+    <!-- Author Photo Section -->
+    <section id="author" class="author-photo-section">
+        <div class="author-photo-container">
+            <div class="author-photo"></div>
+            <div class="author-details">
+                <h2>About Dahlia</h2>
                 <p>Dahlia Knight writes <span class="highlight">dark, decadent romance</span> for readers who crave powerful men and the women who dare to ruin them.</p>
                 
                 <p>Born in India and now living in Dubai, Dahlia blends <span class="highlight">eastern mystery with western edge</span>—crafting love stories where desire cuts deep, and surrender becomes power.</p>
@@ -482,7 +493,7 @@
             const scrollDown = document.querySelector('.scroll-down');
             if (scrollDown) {
                 scrollDown.addEventListener('click', function() {
-                    document.getElementById('about').scrollIntoView({
+                    document.getElementById('author').scrollIntoView({
                         behavior: 'smooth'
                     });
                 });
