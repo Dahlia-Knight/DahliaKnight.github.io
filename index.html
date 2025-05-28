@@ -155,14 +155,15 @@
         }
 
         .author-photo {
+            background: url('dahlia.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             height: 500px;
             border-radius: 15px;
             box-shadow: 0 20px 60px rgba(139, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .author-photo img {
@@ -410,8 +411,6 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <img src="top.jpg" alt="Dahlia Knight" class="hero-bg-img">
-        
         <!-- Author Name - Top Left -->
         <div class="author-name">
             DAHLIA KNIGHT
@@ -435,9 +434,7 @@
     <!-- Author Photo Section -->
     <section id="author" class="author-photo-section">
         <div class="author-photo-container">
-            <div class="author-photo">
-                <img src="dahlia.png" alt="Dahlia Knight Author Photo">
-            </div>
+            <div class="author-photo"></div>
             <div class="author-details">
                 <h2>About Dahlia</h2>
                 <p>Dahlia Knight writes <span class="highlight">dark, decadent romance</span> for readers who crave powerful men and the women who dare to ruin them.</p>
@@ -452,9 +449,7 @@
     <!-- Book Section -->
     <section id="book" class="book-section">
         <div class="book-container">
-            <div class="book-cover">
-                <img src="cover.jpg" alt="Runway to Ruin Book Cover">
-            </div>
+            <div class="book-cover"></div>
             <div class="book-info">
                 <h2 class="book-title">Runway to Ruin</h2>
                 <div class="book-subtitle">A Dark Billionaire Romance</div>
