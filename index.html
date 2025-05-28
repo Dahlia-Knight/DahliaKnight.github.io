@@ -439,7 +439,6 @@
             <div class="hero-tagline">
                 Dark, decadent romance for readers who crave powerful men and the women who dare to ruin them
             </div>
-            <a href="#author" class="cta-button">Enter My World</a>
         </div>
 
         <!-- Scroll Down Indicator -->
@@ -527,17 +526,6 @@
                         behavior: 'smooth'
                     });
                 });
-            }
-        });
-
-        // Add parallax effect to hero section
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            const rate = scrolled * -0.5;
-            
-            if (hero) {
-                hero.style.transform = `translateY(${rate}px)`;
             }
         });
     </script>
